@@ -165,20 +165,24 @@
 
     <section id="section2">
         <p>Imagine you're trying to predict the price of a pizza based on its diameter. You have data from different pizzerias – pairs of diameter and price. You could plot this data on a graph, with diameter on the x-axis and price on the y-axis. Your goal is to find a line that best represents the relationship between these two variables – that's linear regression!</p>
+<div class="continue-button" onclick="showNextSection(3)">Continue</div>
+    </section>
+
+    <section id="section3">
         <div class="vocab-section">
             <h3>Build Your Vocab</h3>
             <h4 class="vocab-term">Linear Regression</h4>
             <p>A statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to observed data.</p>
         </div>
-        <div class="continue-button" onclick="showNextSection(3)">Continue</div>
-    </section>
-
-    <section id="section3">
-        <p>Now, imagine a single perceptron. Remember, it takes inputs, multiplies them by weights, adds a bias, and applies an activation function. But for regression, we'll use a special kind of activation function – a <strong>linear activation function</strong>. This simply means the output is directly proportional to the weighted sum plus the bias – no fancy transformations!</p>
         <div class="continue-button" onclick="showNextSection(4)">Continue</div>
     </section>
 
     <section id="section4">
+        <p>Now, imagine a single perceptron. Remember, it takes inputs, multiplies them by weights, adds a bias, and applies an activation function. But for regression, we'll use a special kind of activation function – a <strong>linear activation function</strong>. This simply means the output is directly proportional to the weighted sum plus the bias – no fancy transformations!</p>
+        <div class="continue-button" onclick="showNextSection(5)">Continue</div>
+    </section>
+
+    <section id="section5">
         <p>The perceptron's equation now looks like this:</p>
         <p>\[ \hat{y} = w_1x_1 + w_2x_2 + ... + w_nx_n + b \]</p>
         <p>Where:</p>
@@ -188,22 +192,30 @@
             <li>\(w_i\) are the weights</li>
             <li>\(b\) is the bias</li>
         </ul>
-        <p>Look familiar? It's the equation of a line! Each weight controls the slope of the line in its corresponding input dimension, and the bias controls the vertical position (intercept) of the line.</p>
-        <div class="continue-button" onclick="showNextSection(5)">Continue</div>
-    </section>
-
-    <section id="section5">
-        <p>So, a single perceptron with a linear activation function is essentially performing linear regression! By adjusting its weights and bias, the perceptron can learn the best-fitting line through the data. Let's see this in action.</p>
-        <div class="interactive-placeholder">
-            <img src="/placeholder.svg?height=300&width=600" alt="Animation showing a scatterplot of data points. A line (representing the perceptron's output) starts randomly and gradually adjusts its position, becoming closer and closer to the best-fitting regression line as the perceptron learns. Show the weights and bias values changing during the animation.">
-        </div>
+        <p>Look familiar? It's the equation of a line (in two dimensions) or a hyperplane (in higher dimensions)! Each weight controls the slope of the line in its corresponding input dimension, and the bias controls the vertical position (intercept) of the line.</p>
         <div class="continue-button" onclick="showNextSection(6)">Continue</div>
     </section>
 
     <section id="section6">
+        <p>So, a single perceptron with a linear activation function is essentially performing linear regression! By adjusting its weights and bias, the perceptron can learn the best-fitting line through the data. Let's see this in action.</p>
+<div class="continue-button" onclick="showNextSection(7)">Continue</div>
+    </section>
+
+    <section id="section7">
+        <div class="interactive-placeholder">
+            <img src="/placeholder.svg?height=300&width=600" alt="Animation showing a scatterplot of data points. A line (representing the perceptron's output) starts randomly and gradually adjusts its position, becoming closer and closer to the best-fitting regression line as the perceptron learns. Show the weights and bias values changing during the animation.">
+        </div>
+        <div class="continue-button" onclick="showNextSection(8)">Continue</div>
+    </section>
+
+    <section id="section8">
         <p>But how does the perceptron learn the 'best' line? It uses a <strong>cost function</strong> to measure its error – the difference between its predictions (\(\hat{y}\)) and the actual values (\(y\)). A common cost function is the <strong>Mean Squared Error (MSE)</strong>:</p>
         <p>\[ MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \]</p>
         <p>The goal is to minimize this error.</p>
+<div class="continue-button" onclick="showNextSection(9)">Continue</div>
+    </section>
+
+    <section id="section9">
         <div class="vocab-section">
             <h3>Build Your Vocab</h3>
             <h4 class="vocab-term">Cost Function</h4>
@@ -211,66 +223,83 @@
             <h4 class="vocab-term">Mean Squared Error (MSE)</h4>
             <p>A common cost function that calculates the average squared difference between predicted and actual values.</p>
         </div>
-        <div class="continue-button" onclick="showNextSection(7)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(10)">Continue</div>
     </section>
 
-    <section id="section7">
+    <section id="section10">
         <p>To minimize the error, the perceptron uses an algorithm called <strong>gradient descent</strong>. It's like rolling a ball down a hill – the ball will eventually settle at the lowest point. Gradient descent iteratively adjusts the weights and bias, following the 'slope' of the error function downhill until it reaches a minimum.</p>
-        <div class="vocab-section">
+        
+<div class="continue-button" onclick="showNextSection(11)">Continue</div>
+    </section>
+
+    <section id="section11">
+<div class="vocab-section">
             <h3>Build Your Vocab</h3>
             <h4 class="vocab-term">Gradient Descent</h4>
             <p>An iterative optimization algorithm used to find the minimum of a function (e.g., a cost function).</p>
         </div>
+<div class="continue-button" onclick="showNextSection(12)">Continue</div>
+    </section>
+
+    <section id="section12">
         <div class="faq-section">
             <h3>Frequently Asked Questions</h3>
             <h4>If a perceptron only performs linear regression, how can neural networks model complex nonlinear relationships?</h4>
             <p>Great question! While a single perceptron with a linear activation function can only model linear relationships, the magic happens when we connect multiple perceptrons in layers and introduce non-linear activation functions. This allows the network to learn complex, non-linear decision boundaries and approximate any continuous function – we'll explore this in detail in later lessons!</p>
         </div>
-        <div class="continue-button" onclick="showNextSection(8)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(13)">Continue</div>
     </section>
 
-    <section id="section8">
+    <section id="section13">
         <h3>Beyond Linearity: The Power of Multiple Perceptrons</h3>
         <p>We've seen how a single perceptron can perform linear regression. But what if the relationship between our data isn't a straight line? What if it's curvy, or even more complex?</p>
         <div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="Image of a dataset with a clear non-linear pattern (e.g., a curve or a spiral), with a straight regression line failing to fit the data well.">
         </div>
-        <div class="continue-button" onclick="showNextSection(9)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(14)">Continue</div>
     </section>
 
-    <section id="section9">
+    <section id="section14">
         <p>This is where the power of neural networks comes in. By connecting multiple perceptrons together in layers, we can model non-linear relationships. Imagine each perceptron learning a simple linear boundary. When combined, these simple boundaries can create complex, curved decision surfaces.</p>
         <div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="Image showing a network of interconnected perceptrons, with each perceptron having its own linear boundary. The combined effect of these boundaries creates a non-linear decision boundary.">
         </div>
-        <div class="continue-button" onclick="showNextSection(10)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(15)">Continue</div>
     </section>
 
-    <section id="section10">
+    <section id="section15">
         <p>Moreover, by introducing non-linear activation functions (like the sigmoid or ReLU), we add even more flexibility to the network. These functions allow the network to learn intricate patterns and approximate any continuous function, no matter how complex.</p>
-        <div class="continue-button" onclick="showNextSection(11)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(16)">Continue</div>
     </section>
 
-    <section id="section11">
+    <section id="section16">
         <p>Think of it like building with LEGO bricks. Each brick is simple on its own, but by combining them in different ways, you can create incredibly complex structures. Similarly, simple perceptrons, when connected and equipped with non-linear activation functions, can model highly complex relationships in data.</p>
         <div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="Funny image of a complex LEGO structure built from many simple bricks, with a caption like 'Neural Networks: Building Complexity from Simplicity'">
         </div>
-        <div class="continue-button" onclick="showNextSection(12)">Continue</div>
+        <div class="continue-button" onclick="showNextSection(17)">Continue</div>
     </section>
 
-    <section id="section12">
+    <section id="section17">
         <h3>Review and Reflect</h3>
         <div class="image-placeholder">
             <img src="/placeholder.svg?height=300&width=600" alt="Image of a dataset with a complex pattern being accurately modeled by a neural network, with a clear non-linear decision boundary.">
         </div>
         <p>We've uncovered the surprising connection between regression and neural networks! Let's recap:</p>
+<div class="continue-button" onclick="showNextSection(18)">Continue</div>
+    </section>
+
+    <section id="section18">
         <ul>
             <li>A single perceptron with a linear activation function performs linear regression.</li>
             <li>Weights and bias control the parameters of the regression line.</li>
             <li>The cost function measures the error, and gradient descent minimizes it.</li>
             <li>Multiple perceptrons with non-linear activation functions can model complex non-linear relationships.</li>
         </ul>
+<div class="continue-button" onclick="showNextSection(19)">Continue</div>
+    </section>
+
+    <section id="section19">
         <p>You now understand how a fundamental statistical technique connects to the powerful world of neural networks. In the next lesson, we'll explore how to actually build and structure these networks, delving into the concepts of layers, connections, and different network architectures. Get ready to become a neural network architect!
         </p>
     </section>
